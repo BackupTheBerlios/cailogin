@@ -41,10 +41,10 @@ Currently supported filters are:
 	* Vertical shift
 	* Horizontal shift
 	* Value invert
-	* Distortion
 	* Random color
-	* Random noise
 	* Random lines
+	* Random noise
+	* Distortion
 	* TODO: Blurring
 	* TODO: Scaling
 	* TODO: Rotation

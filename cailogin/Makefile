@@ -56,7 +56,10 @@ strip:
 	-strip -s cailogin.cgi
 
 release:
-	-rm CAILogin-*.tar.gz
-	tar c * > /tmp/CAILogin-${VERSION}.tar
+	-mkdir /tmp/cailogin-${VERSION}
+	cp -a * /tmp/cailogin-${VERSION}/
+	-rm -f /tmp/cailogin-${VERSION}/CAILogin-*.tar.gz
+	-rm -rf /tmp/cailogin-${VERSION}/CVS
+	cd /tmp/ && tar c cailogin-${VERSION} > /tmp/CAILogin-${VERSION}.tar
 	gzip -9 /tmp/CAILogin-${VERSION}.tar
 	mv /tmp/CAILogin-${VERSION}.tar.gz .

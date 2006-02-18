@@ -1,12 +1,13 @@
 BINDIR:=./
 BITMAPSDIR:=./bitmaps/
-EXECBIN:=\.\/
+EXECBIN:=\.\/cailogin
 DBDIR:=./
-CFLAGS:=-Os -I.
-LDFLAGS:=
+CFLAGS:=-Os -I. -static -march=i386
+LDFLAGS:=-static
 VERSION:=1.0
 SOURCES:=cailogin.c file.c filters.c image.c
 OBJECTS:=cailogin.o file.o filters.o image.o
+CC:=gcc
 
 TIMETHRESHOLD:=600
 MAXDBENTRIES:=300
@@ -34,16 +35,16 @@ example/login.cgi:
 	sed -i 's/^EXECBIN.*$$/EXECBIN=${EXECBIN}/g' example/login.cgi
 
 cailogin: ${OBJECTS}
-	gcc -o cailogin ${OBJECTS}
+	${CC} ${CFLAGS} ${LDFLAGS} -o cailogin ${OBJECTS}
 
 cailogin.cgi: cailogin.cgi.o
-	gcc -o cailogin.cgi cailogin.cgi.o
+	${CC} ${CFLAGS} ${LDFLAGS} -o cailogin.cgi cailogin.cgi.o
 
 cailogin.cgi.o: cailogin.cgi.c
-	gcc -c cailogin.cgi.c
+	${CC} ${CFLAGS} -c cailogin.cgi.c
 
 ${OBJECTS}: ${SOURCES}
-	gcc -c ${SOURCES}
+	${CC} ${CFLAGS} -c ${SOURCES}
 
 clean:
 	-rm *.o
