@@ -17,7 +17,6 @@ all: clean example/ vars.h example/login.cgi cailogin cailogin.cgi
 	cp -a bitmaps ./example/
 	cp cailogin.db ./example/
 	chmod 666 ./example/cailogin.db
-	chown apache:apache ./example/cailogin.db
 
 example/:
 	mkdir example
