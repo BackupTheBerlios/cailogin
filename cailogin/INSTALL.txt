@@ -1,0 +1,23 @@
+*** SYSTEM-WIDE ***
+
+As usual:
+	make
+	make install
+
+To install on a non-standard directory type:
+	make PREFIX=<path/to/route/dir> install
+
+Default installation directories are:
+	cailogin -> /usr/local/bin/
+	cailogin.db -> /var/lib/cailogin/
+	cailogin.cgi -> /var/www/localhost/cgi-bin/
+	bitmaps/* -> /var/lib/cailogin/bitmaps/
+
+*** USER-SPECIFIC ***
+
+You will have to change some variables in Makefile before installing. As an example of
+user-space installation, try:
+	make -f Makefile.example
+	cp -a example /wherever/you/want/
+But be warned that this is not a secure installation. System-wide installation, is the
+most secure option.

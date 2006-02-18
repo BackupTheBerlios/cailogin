@@ -1,0 +1,4 @@
+CAILogin (Counter AI Login) is an image-based user verification program for web-page logins. It's written in plain C with no special dependencies, and hence it's very suitable for embedded systems which lack "big" interpreted languages, such as PHP, Python or Perl. It features a command line interface, which enables it to be utilized from within regular shell scripts.
+
+It works by generating true random numbers, on which later applies several obscuration filters. The end result is an image from which is very difficult to extract the displayed number.
+
