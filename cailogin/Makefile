@@ -6,7 +6,7 @@ BITMAPSDIR:=/var/lib/cailogin/bitmaps/
 DBDIR:=/var/lib/cailogin/
 CFLAGS:=-Os -I.
 LDFLAGS:=
-VERSION:=1.0
+VERSION:=1.1
 SOURCES:=cailogin.c file.c filters.c image.c
 OBJECTS:=cailogin.o file.o filters.o image.o
 
@@ -42,7 +42,7 @@ install: cailogin
 	-mkdir -p ${PREFIX}/${CGIDIR} 2> /dev/null
 	-mkdir -p ${PREFIX}/${BITMAPSDIR} 2> /dev/null
 	install -g root -o root -m 755 cailogin ${PREFIX}/${BINDIR}/
-	install -g root -o root -m 644 bitmaps/* ${PREFIX}/${BITMAPSDIR}/
+	install -g root -o root -m 644 bitmaps/*.bmp ${PREFIX}/${BITMAPSDIR}/
 	install -g root -o root -m 666 cailogin.db ${PREFIX}/${DBDIR}/
 	install -g root -o root -m 755 cailogin.cgi ${PREFIX}/${CGIDIR}/
 

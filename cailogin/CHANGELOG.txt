@@ -1,2 +1,7 @@
+Feb 19 2006: Version 1.1
+	Added background color randomization filter
+	How many, which, and in which order filters are applied are all random
+	Certain filters can be deactivated at compile-time by editing filters.h
+
 Feb 18 2006: Version 1.0
 	Initial release

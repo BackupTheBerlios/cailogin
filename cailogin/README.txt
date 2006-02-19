@@ -41,7 +41,8 @@ Currently supported filters are:
 	* Vertical shift
 	* Horizontal shift
 	* Value invert
-	* Random color
+	* Random FG color
+	* Random BG color
 	* Random lines
 	* Random noise
 	* Distortion

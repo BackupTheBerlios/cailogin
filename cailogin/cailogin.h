@@ -66,8 +66,6 @@ typedef struct __attribute__ ((packed)) BMPImage {
 	Pixel bitmap[CHARHEIGHT][CHARWIDTH * DIGITSOUT];
 } Image;
 
-// Functions
-
 Image * mergeDigits(Digit *digit[]);
 
 void writeImage(Image *);
@@ -77,25 +75,3 @@ Digit * readDigit(unsigned short);
 void printDigit(Digit *);
 
 void printImage(Image *);
-
-int cleanupDB(void);
-
-int getDBEntry(int);
-
-void addDBEntry(int, int);
-
-void delDBEntry(int);
-
-void printDB(void);
-
-Digit * obscureDigit(Digit *);
-
-Digit * shiftX(Digit *);
-
-Digit * shiftY(Digit *);
-
-int colorRand(Digit *);
-
-int colorInvert(Digit *);
-
-int lines(Digit *);

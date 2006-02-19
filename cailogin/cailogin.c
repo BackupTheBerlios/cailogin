@@ -21,6 +21,8 @@
 #include<stdlib.h>
 #include<string.h>
 #include"cailogin.h"
+#include"filters.h"
+#include"file.h"
 #include"vars.h"
 
 #define HELPMSG "\

@@ -20,6 +20,7 @@
 #include<stdio.h>
 #include<time.h>
 #include"cailogin.h"
+#include"file.h"
 #include"vars.h"
 
 static struct entry {

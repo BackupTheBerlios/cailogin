@@ -1,33 +1,29 @@
-* Immediately *
-noise
-distortion
-filter.h
-
 * Short term *
 
-comment code a little bit
-prepare a man page
+provide a way to set the likelyhood of each filter
+introduce mututal exclusive filters
 support blurring filter
 support rotation filter
 support scalling filter
-DB file locking (is it needed?)
 
 * Long term *
 
-clean up code a bit
+prepare a man page
+comment code a little bit
 logging for debuging
 command line switch to print compile time options (directory locations, supported things, etc)
-./configure
+./configure (with filter enable/disable options)
 move cleanupDB() calls from main to file.c
-report to syslog
 use assert for catching errors
 support for multiple fonts (packed in tar balls, gzip compressed) (needs libtar, libz)
 variable width strings
 support letters in addition to numbers
-support other image formats (png, gif, jpeg, tiff)
+support other image formats, optionally (png, gif, jpeg, tiff)
 
 * Questionable *
 
+DB file locking (is it needed?)
+report to syslog?
 support configuration file? (which filters to use)
 support more filters, which? (geometrical transformations)
 Deamonalize? (Interprocess communication wich client program, db in memmory, signal.h)
